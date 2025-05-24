@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form id="form">
+        <div>
+            <label for="idade">idade</label>
+            <input type="idade" number="idade" id="idade">
+        </div>
+        <div>
+            <button type="submit">salvar</button>
+        </div>
+    </form>
+    </section>
+    <section>
+        <h1>resultado</h1>
+        <div id="result"></div>
+    </section>
+    <script>
+        const form= document.getElementById('form')
+        const resultado= document.getElementById('result')
+        
+        form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const number = parseInt(document.getElementById('idade').value);
+    let type;
+
+    if (number ==16|| number ==17) {
+        type = 'é opcional votar';
+    } else if (number >=18) {
+        type = 'é obrigatorio votar';
+    } else {
+        type = 'não pode votar';
+    }
+
+    resultado.innerText = 'idade: ' + number + type;
+});
+
+    </script>
+  
+
+</body>
+</html>

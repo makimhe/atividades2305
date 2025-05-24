@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form id="form">
+        <div>
+            <label for="dindin">dinheiro</label>
+            <input type="dindin" number="dindin" id="dindin">
+        </div>
+        <div>
+            <button type="submit">calcular</button>
+        </div>
+    </form>
+    </section>
+    <section>
+        <h1>resultado</h1>
+        <div id="result"></div>
+    </section>
+    <script>
+        const form= document.getElementById('form')
+        const resultado= document.getElementById('result')
+        
+        form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const money = parseFloat(document.getElementById('dindin').value);
+    let type;
+    const precogasosa = 6.00;
+    const litros= money / precogasosa;
+   
+    resultado.innerText = `Com R$${money.toFixed(2)}, você pode comprar ${litros.toFixed(2)} litros de gasolina.`;
+});
+
+    </script>
+  
+
+</body>
+</html>
