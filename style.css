@@ -1,0 +1,23 @@
+
+        #form {
+            width: 400px;
+            margin: auto;
+            padding: 1rem;
+        }
+        #form input {
+            width: 100%;
+        }
+        #form label {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        #form button {
+            font-size: 18px;
+            width: 100%;
+        }
+        .btns {
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            gap: 15px;
+        }
